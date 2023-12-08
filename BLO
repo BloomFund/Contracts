@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/security/Pausable.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
 contract BloomToken is ERC20, Ownable, Pausable, ReentrancyGuard {
-    uint256 public transactionFee = 1; // 0.3% transaction fee
+    uint256 public transactionFee = 1; // 0.1% transaction fee
     address public burnAddress = address(0xdead); // Placeholder burn address
 
     address public immutable minter; // Address that mints tokens
