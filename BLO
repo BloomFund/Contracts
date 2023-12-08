@@ -1,0 +1,59 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.22;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/security/Pausable.sol";
+import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+
+contract BloomToken is ERC20, Ownable, Pausable, ReentrancyGuard {
+    uint256 public transactionFee = 1; // 0.3% transaction fee
+    address public burnAddress = address(0xdead); // Placeholder burn address
+
+    address public immutable minter; // Address that mints tokens
+    bool public transfersAllowed = true; // Flag to check if transfers are allowed
+
+    constructor(address initialOwner) ERC20("Bloom", "BLO") Ownable(initialOwner) {
+        _mint(msg.sender, 300_000_000 * 10**18); // Mint 300 million tokens with 18 decimals
+        _pause(); // Pause the contract during deployment
+        minter = msg.sender; // Set the minter address as the deployer
+    }
+
+    event FeeTransferred(address indexed from, address indexed to, uint256 value);
+    
+    function setTransactionFee(uint256 fee) external onlyOwner {
+        require(fee <= 1000, "Fee percentage exceeds maximum");
+        transactionFee = fee;
+    }
+
+    function transfer(address to, uint256 value) public override returns (bool) {
+        require(to != address(0), "Transfer to the zero address is not allowed");
+        require(transfersAllowed, "Transfers not allowed during a paused snapshot");
+
+        uint256 feeAmount = (value * transactionFee) / 1000; // Calculate transaction fee
+        uint256 netAmount = value - feeAmount; // Calculate net transfer amount after fee deduction
+
+        if (_msgSender() != minter) {
+            _transfer(_msgSender(), burnAddress, feeAmount); // Send fee to the burn address
+            emit FeeTransferred(_msgSender(), burnAddress, feeAmount); // Emit event for tracking fee transfers
+        } else {
+            feeAmount = 0; // Set fee to 0 for the minter address and when sending to the minter
+            netAmount = value; // No fee deducted for minting address
+        }
+
+        _transfer(_msgSender(), to, netAmount); // Transfer net amount to the recipient
+
+        return true;
+    }
+    function pause() external onlyOwner {
+    _pause();
+    }
+
+    function unpause() external onlyOwner {
+    _unpause();
+    }
+
+    function toggleTransfers(bool status) external onlyOwner {
+        transfersAllowed = status; // Toggle transfers on/off
+    }
+}
