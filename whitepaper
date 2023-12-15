@@ -1,22 +1,13 @@
 BloomFund
+Welcome to BloomFund, an innovative and community-driven investment fund revolutionizing the traditional investment landscape. At BloomFund, our mission is to create a symbiotic relationship between our project's growth and the active participation of our community members. By introducing the BLO token and utilizing groundbreaking strategies like Dollar Cost Averaging (DCA) and Staking, we're redefining investment opportunities and fostering a new era of inclusive and rewarding investing.
+ Central to our commitment to innovation and sustainability is the creation of a solar-powered Bitcoin farm. This initiative aligns with our vision of responsible investment practices, contributing to a greener future while revolutionizing the cryptocurrency mining landscape.
 
-
-Welcome to our groundbreaking community-driven BloomFund a visionary project poised to revolutionize
-investing. Our mission is to establish an innovative investment fund that transcends traditional 
-barriers, starting as an inclusive vehicle for growth and maturing into a robust hedge crypto fund.
-What sets us apart is the opportunity for active participation: by holding our 
-project's token, individuals become integral stakeholders, directly impacting and reflecting 
-the project's evolution through the token's price. Our goal is to create a symbiotic 
-relationship between the project's growth and the community's involvement, 
-forging a new era of investment where everyone contributes to and benefits from the fund's success. 
-
-Applying the proven most effective DCA* strategy, we buy some of the major cryptocurrencies, which we store using the Staking** method.
+Applying the proven most effective DCA* strategy, we buy Bitcoin, which we store using the Staking** method.
 With DCA, we acquire positions in low-risk investments.
 We create our own Token, named BLO, of ERC-20 type, using the efficiency and security of the Ethereum Network. In this way, we provide users with a secure and isolated environment for transactions involving our Token.
 Utility of the Token: BLO operates as the central Utility Token of the BloomFund ecosystem, offering holders some advantages such as:
     • Rewards for participating in Staking
     • Participation in votes for significant decisions
-
 Tokenomics: The total number of BLO to be issued is limited to 300,000,000 with a distribution plan as follows:
     • 5% in Presale
     • 20% in the Project's treasury
@@ -24,18 +15,22 @@ Tokenomics: The total number of BLO to be issued is limited to 300,000,000 with 
     • 20% to the community through Staking, Airdrops, and partnerships
     • 15% for Marketing
     • 20% for creation and development, funding the Technical Roadmap
-
 Our treasury will consist of:
-    • 60% from the Top 10 cryptocurrencies
-    • 20% from our Token
-    • 20% from a low-risk Portfolio
+    • 50% Bitcoin
+    • 30% BLO Token
+    • 20%  a low-risk Portfolio
 Profits from the low-risk Portfolio will be used for:
-    • 20% purchasing our Token from the open market and "burning" it, removing it permanently from circulation
-    • 30% returning to the Portfolio in the form of BTC, BNB, ETH
-    • 50% used to increase capital in the low-risk Portfolio
-A 0.1% tax will be applied to transactions involving our Token, where: This 0.1% will be burned.
-The growth of our Portfolio automatically contributes to the growth of our Token, giving back to the community what it sought from the beginning - a secure and evolving coin.
+    • 30% will be reinvested back into the Portfolio in the form of Bitcoin (BTC) to fortify its stability and growth 
+    • 20% will be dedicated to bolstering the capital within the low-risk Portfolio 
+    • 50% will be directed towards the visionary long-term endeavor of establishing and sustaining the solar-powered Bitcoin farm, aligning with our commitment to responsible and sustainable practices. 
+ An applied 0.3% transaction tax on our Token will directly contribute to fueling our project's roadmap, ensuring ongoing development, innovation, and the realization of our strategic milestones. 
+  The solar farm project is designed to revolutionize our approach to cryptocurrency mining, ensuring sustainability and growth within BloomFund's ecosystem. With miners harnessing the power of solar energy, our aim is to generate Bitcoin through environmentally responsible means.
+  Upon mining Bitcoin, we've outlined a strategic allocation plan. 30% of the mined BTC will be exchanged for BLO tokens from the open market. This acquired 30% will be systematically burned, contributing to a reduction in token supply and enhancing the scarcity of BLO tokens, potentially benefiting our token holders.
+  Furthermore, 20% of the mined BTC will be allocated to fund the ongoing development and execution of our project roadmap. This allocation ensures that our growth and innovation remain constant, enabling us to meet our strategic objectives effectively.
+  Finally, 50% of the mined BTC will bolster the project's treasury. This allocation plays a pivotal role in providing financial stability and facilitating various initiatives within BloomFund, empowering us to further engage in community-building efforts, strategic partnerships, and sustainable growth practices.
+  As we conclude, BloomFund charts a visionary path not only in investment evolution but also in forging a sustainable future. Our unwavering commitment extends beyond immediate gains, resonating deeply in our long-term vision of the solar-powered Bitcoin mining initiative. By dedicating resources, expertise, and a steadfast resolve to this project, we are not merely investing in the present but laying the groundwork for a greener, more sustainable future in the crypto sphere. This bold step exemplifies our dedication to responsible innovation, where the seeds we sow today in the solar-powered mining farm blossom into a legacy of environmentally conscious, forward-thinking practices, shaping a brighter tomorrow for generations to come. Join us as we propel BloomFund towards a horizon where sustainable growth meets technological advancement, forging a path that not only redefines investing but paves the way for a more sustainable and prosperous future. 
 Roadmap
+
 
 Explanations:
 *DCA: Known as Dollar Cost Average, a strategy of investment over time. This method helps to reduce the impact of price fluctuations and potentially lowers the average investment cost. Thus, it provides a stable and less stressful way to enter the market.
