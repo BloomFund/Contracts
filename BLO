@@ -9,7 +9,7 @@ import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 contract BloomToken is ERC20, Ownable, Pausable, ReentrancyGuard {
     using SafeMath for uint256;
 
-    uint256 public transactionFee = 1; // 0.1% transaction fee
+    uint256 public transactionFee = 3; // 0.3% transaction fee
 
     address public immutable minter; // Address that mints tokens
     bool public transfersAllowed = true; // Flag to check if transfers are allowed
