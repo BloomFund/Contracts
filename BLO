@@ -22,6 +22,7 @@ contract BloomToken is ERC20, Ownable, Pausable, ReentrancyGuard {
     }
 
     event FeeTransferred(address indexed from, address indexed to, uint256 value);
+    event ActionLogged(address indexed user, string action, uint256 timestamp);
     
     function setTransactionFee(uint256 fee) external onlyOwner {
         require(fee <= 1000, "Fee percentage exceeds maximum");
@@ -45,18 +46,30 @@ contract BloomToken is ERC20, Ownable, Pausable, ReentrancyGuard {
 
         _transfer(_msgSender(), to, netAmount); // Transfer net amount to the recipient
 
+        logAction("Transfer"); // Log transfer action
         return true;
     }
     
     function pause() external onlyOwner {
         _pause();
+        logAction("Paused");
     }
 
     function unpause() external onlyOwner {
         _unpause();
+        logAction("Unpaused");
     }
 
     function toggleTransfers(bool status) external onlyOwner {
         transfersAllowed = status; // Toggle transfers on/off
+        if (status) {
+            logAction("TransfersEnabled");
+        } else {
+            logAction("TransfersDisabled");
+        }
+    }
+
+    function logAction(string memory action) internal {
+        emit ActionLogged(msg.sender, action, block.timestamp);
     }
 }
